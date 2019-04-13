@@ -18,45 +18,45 @@ public class WatermarkImgUtils {
 
 	public static void main(String[] args) {
 		System.out.println("开始水印");
-		new WatermarkImgUtils().addWatermark("E:\\test/ATS-A.png", "E:\\test/1.png", "��������OCC����������A", "png");
-		System.out.println("水印完成");
+		new WatermarkImgUtils().addWatermark("E:\\test/ATS-A.png", "E:\\test/1.png", "锟斤拷锟斤拷锟斤拷锟斤拷OCC锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷A", "png");
+		System.out.println("水印结束");
 	}
 
 	/**
 	 * @description
-	 * @param sourceImgPath    ԴͼƬ·��
-	 * @param tarImgPath       �����ͼƬ·��
-	 * @param waterMarkContent ˮӡ����
-	 * @param fileExt          ͼƬ��ʽ
+	 * @param sourceImgPath    源图片路锟斤拷
+	 * @param tarImgPath       锟斤拷锟斤拷锟酵计凤拷锟�
+	 * @param waterMarkContent 水印锟斤拷锟斤拷
+	 * @param fileExt          图片锟斤拷式
 	 * @return void
 	 */
 	public void addWatermark(String sourceImgPath, String tarImgPath, String waterMarkContent, String fileExt) {
-		Font font = new Font("����", Font.BOLD, 10);// ˮӡ���壬��С
-		Color markContentColor = Color.BLACK;// ˮӡ��ɫ
-		Integer degree = 45;// ����ˮӡ���ֵ���ת�Ƕ�
-		float alpha = 1f;// ����ˮӡ͸����
+		Font font = new Font("锟斤拷锟斤拷", Font.BOLD, 10);// 水印锟斤拷锟藉，锟斤拷小
+		Color markContentColor = Color.BLACK;// 水印锟斤拷色
+		Integer degree = 45;// 锟斤拷锟斤拷水印锟斤拷锟街碉拷锟斤拷转锟角讹拷
+		float alpha = 1f;// 锟斤拷锟斤拷水印透锟斤拷锟斤拷
 		OutputStream outImgStream = null;
 		try {
-			File srcImgFile = new File(sourceImgPath);// �õ��ļ�
-			Image srcImg = ImageIO.read(srcImgFile);// �ļ�ת��ΪͼƬ
-			int srcImgWidth = srcImg.getWidth(null);// ��ȡͼƬ�Ŀ�
-			int srcImgHeight = srcImg.getHeight(null);// ��ȡͼƬ�ĸ�
-			// ��ˮӡ
+			File srcImgFile = new File(sourceImgPath);// 锟矫碉拷锟侥硷拷
+			Image srcImg = ImageIO.read(srcImgFile);// 锟侥硷拷转锟斤拷为图片
+			int srcImgWidth = srcImg.getWidth(null);// 锟斤拷取图片锟侥匡拷
+			int srcImgHeight = srcImg.getHeight(null);// 锟斤拷取图片锟侥革拷
+			// 锟斤拷水印
 			BufferedImage bufImg = new BufferedImage(srcImgWidth, srcImgHeight, BufferedImage.TYPE_INT_RGB);
-			Graphics2D g = bufImg.createGraphics();// �õ�����
+			Graphics2D g = bufImg.createGraphics();// 锟矫碉拷锟斤拷锟斤拷
 			g.drawImage(srcImg, 0, 0, srcImgWidth, srcImgHeight, null);
-			g.setColor(markContentColor); // ����ˮӡ��ɫ
-			g.setFont(font); // ��������
-			g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));// ����ˮӡ����͸����
+			g.setColor(markContentColor); // 锟斤拷锟斤拷水印锟斤拷色
+			g.setFont(font); // 锟斤拷锟斤拷锟斤拷锟斤拷
+			g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));// 锟斤拷锟斤拷水印锟斤拷锟斤拷透锟斤拷锟斤拷
 			if (null != degree) {
-				g.rotate(Math.toRadians(degree));// ����ˮӡ��ת
+				g.rotate(Math.toRadians(degree));// 锟斤拷锟斤拷水印锟斤拷转
 			}
 			JLabel label = new JLabel(waterMarkContent);
 			FontMetrics metrics = label.getFontMetrics(font);
-			int width = metrics.stringWidth(label.getText());// ����ˮӡ�Ŀ�
-			int rowsNumber = srcImgHeight / width;// ͼƬ�ĸ� ���� ����ˮӡ�Ŀ� ����> ��ӡ������(������ˮӡ�Ŀ�Ϊ���)
-			int columnsNumber = srcImgWidth / width;// ͼƬ�Ŀ� ���� ����ˮӡ�Ŀ� ����> ÿ�д�ӡ������(������ˮӡ�Ŀ�Ϊ���)
-			// ��ֹͼƬ̫С������ˮӡ̫�����������ٴ�ӡһ��
+			int width = metrics.stringWidth(label.getText());// 锟斤拷锟斤拷水印锟侥匡拷
+			int rowsNumber = srcImgHeight / width;// 图片锟侥革拷 锟斤拷锟斤拷 锟斤拷锟斤拷水印锟侥匡拷 锟斤拷锟斤拷> 锟斤拷印锟斤拷锟斤拷锟斤拷(锟斤拷锟斤拷锟斤拷水印锟侥匡拷为锟斤拷锟�)
+			int columnsNumber = srcImgWidth / width;// 图片锟侥匡拷 锟斤拷锟斤拷 锟斤拷锟斤拷水印锟侥匡拷 锟斤拷锟斤拷> 每锟叫达拷印锟斤拷锟斤拷锟斤拷(锟斤拷锟斤拷锟斤拷水印锟侥匡拷为锟斤拷锟�)
+			// 锟斤拷止图片太小锟斤拷锟斤拷锟斤拷水印太锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟劫达拷印一锟斤拷
         	if(rowsNumber < 1){
         		rowsNumber = 1;
         	}
@@ -65,12 +65,12 @@ public class WatermarkImgUtils {
         	}
         	for(int j=0;j<rowsNumber;j++){
         		for(int i=0;i<columnsNumber;i++){
-            		g.drawString(waterMarkContent, i*width + j*width, -i*width + j*width);//����ˮӡ,������ˮӡλ��
+            		g.drawString(waterMarkContent, i*width + j*width, -i*width + j*width);//锟斤拷锟斤拷水印,锟斤拷锟斤拷锟斤拷水印位锟斤拷
             	}
         	}
-//			g.drawString(waterMarkContent, 35, 35);// ����ˮӡ,������ˮӡλ��
-			g.dispose();// �ͷ���Դ
-			// ���ͼƬ
+//			g.drawString(waterMarkContent, 35, 35);// 锟斤拷锟斤拷水印,锟斤拷锟斤拷锟斤拷水印位锟斤拷
+			g.dispose();// 锟酵凤拷锟斤拷源
+			// 锟斤拷锟酵计�
 			outImgStream = new FileOutputStream(tarImgPath);
 			ImageIO.write(bufImg, fileExt, outImgStream);
 		} catch (Exception e) {
