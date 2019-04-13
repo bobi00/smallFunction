@@ -15,7 +15,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
  
 /*******************************************************************************
- * Description: Í¼Æ¬Ë®Ó¡¹¤¾ßÀà 
+ * Description: å›¾ç‰‡æ°´å°å·¥å…·ç±» 
  * Copyright: Copyright (c) 2011 
  * Company: Founder 
  * Project: CMS
@@ -27,28 +27,28 @@ import javax.swing.ImageIcon;
  ******************************************************************************/
 public class ImageMarkLogoUtil {
      
-    // Ë®Ó¡Í¸Ã÷¶È 
+    // æ°´å°é€æ˜åº¦ 
     private static float alpha = 1f;
-    // Ë®Ó¡ºáÏòÎ»ÖÃ
+    // æ°´å°æ¨ªå‘ä½ç½®
     private static int positionWidth = 150;
-    // Ë®Ó¡×İÏòÎ»ÖÃ
+    // æ°´å°çºµå‘ä½ç½®
     private static int positionHeight = 300;
-    // Ë®Ó¡ÎÄ×Ö×ÖÌå
-    private static Font font = new Font("ËÎÌå", Font.BOLD, 20);
-    // Ë®Ó¡ÎÄ×ÖÑÕÉ«
+    // æ°´å°æ–‡å­—å­—ä½“
+    private static Font font = new Font("å®‹ä½“", Font.BOLD, 20);
+    // æ°´å°æ–‡å­—é¢œè‰²
     private static Color color = Color.RED;
     /**
      * 
      * @param alpha 
-     *          Ë®Ó¡Í¸Ã÷¶È
+     *          æ°´å°é€æ˜åº¦
      * @param positionWidth 
-     *          Ë®Ó¡ºáÏòÎ»ÖÃ
+     *          æ°´å°æ¨ªå‘ä½ç½®
      * @param positionHeight 
-     *          Ë®Ó¡×İÏòÎ»ÖÃ
+     *          æ°´å°çºµå‘ä½ç½®
      * @param font 
-     *          Ë®Ó¡ÎÄ×Ö×ÖÌå
+     *          æ°´å°æ–‡å­—å­—ä½“
      * @param color 
-     *          Ë®Ó¡ÎÄ×ÖÑÕÉ«
+     *          æ°´å°æ–‡å­—é¢œè‰²
      */
     public static void setImageMarkOptions(float alpha , int positionWidth , int positionHeight ,Font font,Color color){
         if(alpha!=0.0f)ImageMarkLogoUtil.alpha = alpha;
@@ -59,14 +59,14 @@ public class ImageMarkLogoUtil {
     }
      
     /**
-     * ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡Í¼Æ¬
+     * ç»™å›¾ç‰‡æ·»åŠ æ°´å°å›¾ç‰‡
      * 
      * @param iconPath
-     *            Ë®Ó¡Í¼Æ¬Â·¾¶
+     *            æ°´å°å›¾ç‰‡è·¯å¾„
      * @param srcImgPath
-     *            Ô´Í¼Æ¬Â·¾¶
+     *            æºå›¾ç‰‡è·¯å¾„
      * @param targerPath
-     *            Ä¿±êÍ¼Æ¬Â·¾¶
+     *            ç›®æ ‡å›¾ç‰‡è·¯å¾„
      */
     public static void markImageByIcon(String iconPath, String srcImgPath,
             String targerPath) {
@@ -74,16 +74,16 @@ public class ImageMarkLogoUtil {
     }
  
     /**
-     * ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡Í¼Æ¬¡¢¿ÉÉèÖÃË®Ó¡Í¼Æ¬Ğı×ª½Ç¶È
+     * ç»™å›¾ç‰‡æ·»åŠ æ°´å°å›¾ç‰‡ã€å¯è®¾ç½®æ°´å°å›¾ç‰‡æ—‹è½¬è§’åº¦
      * 
      * @param iconPath
-     *            Ë®Ó¡Í¼Æ¬Â·¾¶
+     *            æ°´å°å›¾ç‰‡è·¯å¾„
      * @param srcImgPath
-     *            Ô´Í¼Æ¬Â·¾¶
+     *            æºå›¾ç‰‡è·¯å¾„
      * @param targerPath
-     *            Ä¿±êÍ¼Æ¬Â·¾¶
+     *            ç›®æ ‡å›¾ç‰‡è·¯å¾„
      * @param degree
-     *            Ë®Ó¡Í¼Æ¬Ğı×ª½Ç¶È
+     *            æ°´å°å›¾ç‰‡æ—‹è½¬è§’åº¦
      */
     public static void markImageByIcon(String iconPath, String srcImgPath,
             String targerPath, Integer degree) {
@@ -95,36 +95,36 @@ public class ImageMarkLogoUtil {
             BufferedImage buffImg = new BufferedImage(srcImg.getWidth(null),
                     srcImg.getHeight(null), BufferedImage.TYPE_INT_RGB);
  
-            // 1¡¢µÃµ½»­±Ê¶ÔÏó
+            // 1ã€å¾—åˆ°ç”»ç¬”å¯¹è±¡
             Graphics2D g = buffImg.createGraphics();
  
-            // 2¡¢ÉèÖÃ¶ÔÏß¶ÎµÄ¾â³İ×´±ßÔµ´¦Àí
+            // 2ã€è®¾ç½®å¯¹çº¿æ®µçš„é”¯é½¿çŠ¶è¾¹ç¼˜å¤„ç†
             g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,RenderingHints.VALUE_INTERPOLATION_BILINEAR);
             g.drawImage(srcImg.getScaledInstance(srcImg.getWidth(null), srcImg.getHeight(null), Image.SCALE_SMOOTH), 0, 0, null);
-            // 3¡¢ÉèÖÃË®Ó¡Ğı×ª
+            // 3ã€è®¾ç½®æ°´å°æ—‹è½¬
             if (null != degree) {
                 g.rotate(Math.toRadians(degree),(double) buffImg.getWidth() / 2, (double) buffImg.getHeight() / 2);
             }
  
-            // 4¡¢Ë®Ó¡Í¼Æ¬µÄÂ·¾¶ Ë®Ó¡Í¼Æ¬Ò»°ãÎªgif»òÕßpngµÄ£¬ÕâÑù¿ÉÉèÖÃÍ¸Ã÷¶È
+            // 4ã€æ°´å°å›¾ç‰‡çš„è·¯å¾„ æ°´å°å›¾ç‰‡ä¸€èˆ¬ä¸ºgifæˆ–è€…pngçš„ï¼Œè¿™æ ·å¯è®¾ç½®é€æ˜åº¦
             ImageIcon imgIcon = new ImageIcon(iconPath);
  
-            // 5¡¢µÃµ½Image¶ÔÏó¡£
+            // 5ã€å¾—åˆ°Imageå¯¹è±¡ã€‚
             Image img = imgIcon.getImage();
              
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,alpha));
  
-            // 6¡¢Ë®Ó¡Í¼Æ¬µÄÎ»ÖÃ
+            // 6ã€æ°´å°å›¾ç‰‡çš„ä½ç½®
             g.drawImage(img, positionWidth, positionHeight, null);
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER));
-            // 7¡¢ÊÍ·Å×ÊÔ´
+            // 7ã€é‡Šæ”¾èµ„æº
             g.dispose();
              
-            // 8¡¢Éú³ÉÍ¼Æ¬
+            // 8ã€ç”Ÿæˆå›¾ç‰‡
             os = new FileOutputStream(targerPath);
             ImageIO.write(buffImg, "JPG", os);
  
-            System.out.println("Í¼Æ¬Íê³ÉÌí¼ÓË®Ó¡Í¼Æ¬");
+            System.out.println("å›¾ç‰‡å®Œæˆæ·»åŠ æ°´å°å›¾ç‰‡");
              
         } catch (Exception e) {
             e.printStackTrace();
@@ -139,14 +139,14 @@ public class ImageMarkLogoUtil {
     }
  
     /**
-     * ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö
+     * ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—
      * 
      * @param logoText 
-     *          Ë®Ó¡ÎÄ×Ö
+     *          æ°´å°æ–‡å­—
      * @param srcImgPath
-     *          Ô´Í¼Æ¬Â·¾¶
+     *          æºå›¾ç‰‡è·¯å¾„
      * @param targerPath
-     *          Ä¿±êÍ¼Æ¬Â·¾¶
+     *          ç›®æ ‡å›¾ç‰‡è·¯å¾„
      */
     public static void markImageByText(String logoText, String srcImgPath,
             String targerPath) {
@@ -154,7 +154,7 @@ public class ImageMarkLogoUtil {
     }
  
     /**
-     * ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö¡¢¿ÉÉèÖÃË®Ó¡ÎÄ×ÖµÄĞı×ª½Ç¶È
+     * ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—ã€å¯è®¾ç½®æ°´å°æ–‡å­—çš„æ—‹è½¬è§’åº¦
      * 
      * @param logoText
      * @param srcImgPath
@@ -167,34 +167,34 @@ public class ImageMarkLogoUtil {
         InputStream is = null;
         OutputStream os = null;
         try {
-            // 1¡¢Ô´Í¼Æ¬
+            // 1ã€æºå›¾ç‰‡
             Image srcImg = ImageIO.read(new File(srcImgPath));
             BufferedImage buffImg = new BufferedImage(srcImg.getWidth(null),srcImg.getHeight(null), BufferedImage.TYPE_INT_RGB);
  
-            // 2¡¢µÃµ½»­±Ê¶ÔÏó
+            // 2ã€å¾—åˆ°ç”»ç¬”å¯¹è±¡
             Graphics2D g = buffImg.createGraphics();
-            // 3¡¢ÉèÖÃ¶ÔÏß¶ÎµÄ¾â³İ×´±ßÔµ´¦Àí
+            // 3ã€è®¾ç½®å¯¹çº¿æ®µçš„é”¯é½¿çŠ¶è¾¹ç¼˜å¤„ç†
             g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,RenderingHints.VALUE_INTERPOLATION_BILINEAR);
             g.drawImage(srcImg.getScaledInstance(srcImg.getWidth(null), srcImg.getHeight(null), Image.SCALE_SMOOTH), 0, 0, null);
-            // 4¡¢ÉèÖÃË®Ó¡Ğı×ª
+            // 4ã€è®¾ç½®æ°´å°æ—‹è½¬
             if (null != degree) {
                 g.rotate(Math.toRadians(degree),(double) buffImg.getWidth() / 2, (double) buffImg.getHeight() / 2);
             }
-            // 5¡¢ÉèÖÃË®Ó¡ÎÄ×ÖÑÕÉ«
+            // 5ã€è®¾ç½®æ°´å°æ–‡å­—é¢œè‰²
             g.setColor(color);
-            // 6¡¢ÉèÖÃË®Ó¡ÎÄ×ÖFont
+            // 6ã€è®¾ç½®æ°´å°æ–‡å­—Font
             g.setFont(font);
-            // 7¡¢ÉèÖÃË®Ó¡ÎÄ×ÖÍ¸Ã÷¶È
+            // 7ã€è®¾ç½®æ°´å°æ–‡å­—é€æ˜åº¦
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,alpha));
-            // 8¡¢µÚÒ»²ÎÊı->ÉèÖÃµÄÄÚÈİ£¬ºóÃæÁ½¸ö²ÎÊı->ÎÄ×ÖÔÚÍ¼Æ¬ÉÏµÄ×ø±êÎ»ÖÃ(x,y)
+            // 8ã€ç¬¬ä¸€å‚æ•°->è®¾ç½®çš„å†…å®¹ï¼Œåé¢ä¸¤ä¸ªå‚æ•°->æ–‡å­—åœ¨å›¾ç‰‡ä¸Šçš„åæ ‡ä½ç½®(x,y)
             g.drawString(logoText, positionWidth, positionHeight);
-            // 9¡¢ÊÍ·Å×ÊÔ´
+            // 9ã€é‡Šæ”¾èµ„æº
             g.dispose();
-            // 10¡¢Éú³ÉÍ¼Æ¬
+            // 10ã€ç”Ÿæˆå›¾ç‰‡
             os = new FileOutputStream(targerPath);
             ImageIO.write(buffImg, "JPG", os);
  
-            System.out.println("Í¼Æ¬Íê³ÉÌí¼ÓË®Ó¡ÎÄ×Ö");
+            System.out.println("å›¾ç‰‡å®Œæˆæ·»åŠ æ°´å°æ–‡å­—");
              
         } catch (Exception e) {
             e.printStackTrace();
@@ -225,26 +225,26 @@ public class ImageMarkLogoUtil {
 //        String targerIconPath = "d:/qie_icon.jpg";  
 //        String targerIconPath2 = "d:/qie_icon_rotate.jpg";
 //         
-//        System.out.println("¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö¿ªÊ¼...");
-//        // ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö  
+//        System.out.println("ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—å¼€å§‹...");
+//        // ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—  
 //        markImageByText(logoText, srcImgPath, targerTextPath);  
-//        // ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö,Ë®Ó¡ÎÄ×ÖĞı×ª-45  
+//        // ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—,æ°´å°æ–‡å­—æ—‹è½¬-45  
 //        markImageByText(logoText, srcImgPath, targerTextPath2, -45);  
-//        System.out.println("¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö½áÊø...");
+//        System.out.println("ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—ç»“æŸ...");
 //         
-//        System.out.println("¸øÍ¼Æ¬Ìí¼ÓË®Ó¡Í¼Æ¬¿ªÊ¼...");
+//        System.out.println("ç»™å›¾ç‰‡æ·»åŠ æ°´å°å›¾ç‰‡å¼€å§‹...");
 //        setImageMarkOptions(0.3f,1,1,null,null);
-//        // ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡Í¼Æ¬  
+//        // ç»™å›¾ç‰‡æ·»åŠ æ°´å°å›¾ç‰‡  
 //        markImageByIcon(iconPath, srcImgPath, targerIconPath);  
-//        // ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡Í¼Æ¬,Ë®Ó¡Í¼Æ¬Ğı×ª-45  
+//        // ç»™å›¾ç‰‡æ·»åŠ æ°´å°å›¾ç‰‡,æ°´å°å›¾ç‰‡æ—‹è½¬-45  
 //        markImageByIcon(iconPath, srcImgPath, targerIconPath2, -45); 
-//        System.out.println("¸øÍ¼Æ¬Ìí¼ÓË®Ó¡Í¼Æ¬½áÊø...");
+//        System.out.println("ç»™å›¾ç‰‡æ·»åŠ æ°´å°å›¾ç‰‡ç»“æŸ...");
     	
     	
-      // ¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö,Ë®Ó¡ÎÄ×ÖĞı×ª-45  
+      // ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—,æ°´å°æ–‡å­—æ—‹è½¬-45  
     	
-    	markImageByText("Å£±Æ", "E:\\test/ATS-A.png", "E:\\test/1.png", -45);  
-    	System.out.println("¸øÍ¼Æ¬Ìí¼ÓË®Ó¡ÎÄ×Ö½áÊø...");
+    	markImageByText("ç‰›é€¼", "E:\\test/ATS-A.png", "E:\\test/1.png", -45);  
+    	System.out.println("ç»™å›¾ç‰‡æ·»åŠ æ°´å°æ–‡å­—ç»“æŸ...");
     }
  
 }
